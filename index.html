@@ -1,62 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlackJack</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
     />
-  </head>
-  <body>
-    <div class="position-absolute top-0 end-0 gambar-icon-tutorial">
-        <img src="assets/icon_tutorial_.png" alt="" class="" data-bs-toggle="modal" data-bs-target="#tutorial-modal">
-    </div>
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-title">Tutorial</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6>Tujuan Permainan</h6>
-                <p>Mendapatkan total nilai kartu yang lebih tinggi daripada dealer tanpa melebihi 21. Jika total nilai kartu pemain melebihi 21, pemain "bust" dan kalah otomatis.</p>
-                <br>
-                <h6></h6>
+</head>
+<body>
+    <nav class="nav flex-column position-absolute top-0 end-0">
+      <div class=" gambar-icon-tutorial">
+        <img src="assets/icon_tutorial_.png" alt="" class="" data-bs-toggle="modal" data-bs-target="#tutorial-modal" id="tutorial">
+      </div>
+      <div class="gambar-icon-tutorial">
+        <img src="assets/music_background_play.png" alt="music" id="music-play">
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="tutorial-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Tujuan Permainan</h6>
+                    <p>Mendapatkan total nilai kartu yang lebih tinggi daripada dealer tanpa melebihi 21. Jika total nilai kartu pemain melebihi 21, pemain "bust" dan kalah otomatis.</p>
+                    <br>
+                    <h6>Nilai Kartu</h6>
+                    <p>Kartu angka (2-10) bernilai sesuai dengan angka yang tertera. Kartu wajah (Jack, Queen, King) masing-masing bernilai 10.
+                    Kartu As (Ace) bisa bernilai 1 atau 11, tergantung mana yang lebih menguntungkan bagi pemain.</p>
+                    <br>
+                    <h6>Pilihan Pemain </h6>
+                    <p>Hit: Pemain meminta kartu tambahan untuk mendekati nilai 21. Pemain dapat terus meminta kartu sampai mereka puas dengan total nilai atau hingga mereka bust.
+                    <br>
+                    <p>Stand: Pemain puas dengan total nilai kartunya dan tidak ingin mengambil kartu tambahan.</p>
+                    <h6>Menentukan Pemenang</h6>
+                    <p>Jika total nilai kartu pemain lebih tinggi daripada dealer tanpa melebihi 21, pemain menang.
+                    <br>
+                    <p>Jika dealer bust, semua pemain yang tersisa di meja menang.
+                    jika dealer memiliki nilai kartu lebih tinggi tanpa bust, dealer menang.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="row colm1">
-      <div class="col-6 col-md-4"></div>
-      <div class="col-6 col-md-4">
-        <div id="top">
-          <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
-          <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
+        <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4">
+            <div id="top">
+                <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
+                <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
+            </div>
         </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div id="top-right">
-          <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
+        <div class="col-6 col-md-4">
+            <div id="top-right">
+                <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
+            </div>
         </div>
-      </div>
     </div>
     <div class="row colm2">
-      <div class="col-6 col-md-4"></div>
-      <div class="col-6 col-md-4">
-        <div id="top">
-          <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
-          <img
-            src="assets/Hati/10-H.png"
-            alt="Hak"
-            style="width: 120px"
-          />
+        <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4">
+            <div id="top">
+                <img src="assets/Hati/10-H.png" alt="Hak" style="width: 120px" />
+                <img
+                    src="assets/Hati/10-H.png"
+                    alt="Hak"
+                    style="width: 120px"
+                />
+            </div>
         </div>
-      </div>
-      <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4"></div>
     </div>
-  </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <embed src="assets/Sound/backsound_casino.mp3" loop="true" autostart="true" width="0" height="0" id="music-control">
+</body>
 </html>

@@ -8,6 +8,8 @@ body {
     background-image: url("assets/Frame_1.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
   }
 
 .gambar-icon-tutorial {
@@ -31,7 +33,7 @@ body {
 }
 
 button {
-    background-color: red;
+    /* background-color: red;
     height: 100px;
     width: 100px;
     text-decoration: none;
@@ -42,7 +44,9 @@ button {
     color: white;
     border-style: dashed;
     border-color: white;
-    box-shadow: inset 0 5px 10px rgb(77, 77, 77);
+    box-shadow: inset 0 5px 10px rgb(77, 77, 77); */
+    background: transparent;
+    border: none;
 }
 
 #top {
