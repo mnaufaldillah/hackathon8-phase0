@@ -1,5 +1,6 @@
 const playMusic = document.getElementById('music-play');
 const controlMusic = document.getElementById('music-control');
+const gameStart = document.getElementById('game-start');
 let toggle = true;
 
 playMusic.addEventListener('click', function(){
