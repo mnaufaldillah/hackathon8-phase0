@@ -16,3 +16,18 @@ playMusic.addEventListener('click', function(){
         controlMusic.muted = true;
     }
 })
+
+const formMoney = document.getElementById('form-money');
+
+gameStart.addEventListener('click', function(){
+    gameStart.remove()
+
+    const formText = document.createElement('h5');
+    formText.innerText = 'Masukkan jumlah chip anda'
+    formMoney.appendChild(formText);
+
+    const formInput = document.createElement('input');
+    formMoney.appendChild(formInput);
+
+
+})
